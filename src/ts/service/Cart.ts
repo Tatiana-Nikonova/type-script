@@ -16,7 +16,7 @@ export default class Cart {
 	}
 
 	getAllPriceWithDiscont(discont: number): number {
-		return (1 - discont / 100) * this._items.reduce((a: number, b: Buyable) => a + b.price, 0);
+		return (1 - discont / 100) * this.getAllPrice();
 	}
 
 	delete(id: number): Buyable[] {
